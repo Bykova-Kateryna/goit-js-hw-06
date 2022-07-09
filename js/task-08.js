@@ -9,7 +9,7 @@ function validationInput (event) {
     if (email.value === "" || password.value === ""){
         alert("Please fill in the empty fields!")
     }
-    else
-    console.log(formData);
+    else {console.log(formData);}
+    
     form.reset();
 }

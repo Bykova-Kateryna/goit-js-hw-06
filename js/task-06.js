@@ -6,7 +6,10 @@ validationInput.addEventListener('blur', validationColor)
 function validationColor () {
     if (validationInput.value.length === validationLength){
         validationInput.classList.add('valid');
+        validationInput.classList.remove('invalid');
     }
-    else {validationInput.classList.add('invalid');}
+    else {validationInput.classList.add('invalid');
+          validationInput.classList.remove('valid');
+        }
     return
 }
