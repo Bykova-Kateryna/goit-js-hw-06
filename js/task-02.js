@@ -8,12 +8,20 @@ const ingredients = [
 ];
 
 const ingredientsList = document.querySelector('#ingredients')
-ingredients.map((ingredient) => {
+
+// ingredients.map((ingredient) => {
+//   const itemElements = document.createElement('li');
+//   itemElements.classList.add('item');
+//   itemElements.textContent = ingredient;
+//   ingredientsList.append(itemElements)
+// })
+
+ingredientsList.append(...ingredients.map((ingredient) => {
   const itemElements = document.createElement('li');
   itemElements.classList.add('item');
   itemElements.textContent = ingredient;
-  ingredientsList.append(itemElements)
-})
+  return itemElements;
+}))
 
 // const elementForList = [];
 

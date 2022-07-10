@@ -11,13 +11,14 @@ const boxes = document.querySelector("#boxes");
 buttonCreate.addEventListener("click", createBoxes)
 buttonDestroy.addEventListener("click", destroyBoxes)
 
-let size = 20;
+let height = 20;
+let width = 20;
 
 function createBoxes(amount){
   amount = numberOfBoxes.value;
   const newBoxes = [];
   for (let i = 0; i < amount; i += 1){
-    const newElement = `<div style = " border: 2px solid #212121; height: ${size+=10}px; width: ${size+=10}px; background-color: ${getRandomHexColor()}"></div>`
+    const newElement = `<div style = " border: 2px solid #212121; height: ${height+=10}px; width: ${width+=10}px; background-color: ${getRandomHexColor()}"></div>`
     
     newBoxes.push(newElement)
   }
